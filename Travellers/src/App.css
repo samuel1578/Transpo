@@ -1,0 +1,387 @@
+/* Adding a classy font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9;
+}
+
+.App-header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem; /* Increase the padding to make the header space larger */
+}
+
+.App-header .logo img {
+  height: 70px; /* Increase the logo size */
+}
+
+.App-header nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.App-header nav ul li {
+  margin: 0 1.5rem; /* Increase the space between navigation items */
+}
+
+.App-header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem; /* Increase the font size */
+  transition: color 0.3s;
+  font-family: 'Playfair Display', serif; /* Use a classy font */
+}
+
+.App-header nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 100vh; /* Full viewport height */
+  background: url('https://images.pexels.com/photos/31164761/pexels-photo-31164761/free-photo-of-young-couple-navigates-outdoors-with-phone.jpeg?auto=compress&cs=tinysrgb&w=1200') no-repeat center center/cover; /* Higher quality image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 80%; /* Constrain the width */
+}
+
+.hero-text h1 {
+  font-size: 4rem; /* Larger font size for the heading */
+  margin: 0;
+  font-family: 'Playfair Display', serif; /* Use a classy font */
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.hero-text button {
+  font-size: 1.2rem; /* Slightly larger button text */
+  padding: 0.75rem 1.5rem; /* Larger button */
+  margin-top: 1rem;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-text button:hover {
+  background-color: #e6b800;
+}
+
+.explore, .services, .gallery, .contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+.explore h2, .services h2, .gallery h2, .contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-family: 'Playfair Display', serif; /* Use a classy font */
+}
+
+.explore p, .services p, .contact p {
+  font-size: 1rem;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+}
+.destinations {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.destination {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.destination:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.destination img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 4px solid #ff6600; /* Accent color */
+}
+
+.destination h3 {
+  padding: 12px;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  background-color: white;
+  color: #333;
+}
+
+.services-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.service-item img {
+  width: 100%;
+  height: 250px; /* Tall image */
+  object-fit: cover; /* Ensures images look good without distortion */
+  border-radius: 10px;
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #1a73e8;
+  font-family: 'Playfair Display', serif; /* Use a classy font */
+  text-align: center;
+}
+
+.service-item p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-item {
+    width: 90%;
+  }
+
+  .service-item img {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item img {
+    height: 180px; /* Further adjust for smaller devices */
+  }
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section with Background Image */
+.contact {
+  position: relative;
+  padding: 3rem 1rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Background Image */
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2d2d2d;
+  filter: brightness(50%); /* Darkens the image slightly */
+  z-index: -1;
+}
+.contact * {
+  position: relative;
+  z-index: 1;
+}
+/* Soft Overlay */
+.contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Soft black overlay */
+  z-index: 0;
+}
+
+/* Heading */
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #FFD700; /* Golden Yellow */
+}
+
+/* Contact Form */
+.contact form {
+  background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Form Group */
+.contact .form-group {
+  width: 100%;
+}
+
+/* Labels */
+.contact label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Inputs & Textareas */
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  outline: none;
+}
+
+/* Submit Button */
+.contact button {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #FFD700, #E6B800); /* Golden Yellow */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+.contact button:hover {
+  background: linear-gradient(135deg, #E6B800, #C9A000);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .contact form {
+    padding: 1.5rem;
+  }
+}
+
+.App-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.App-footer p {
+  margin: 0.5rem 0;
+}
+
+.App-footer .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.App-footer .social-media a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.App-footer .social-media a:hover {
+  color: #ffcc00;
+}
